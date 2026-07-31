@@ -57,9 +57,16 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
+
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name',
                        'last_name']  # Add the new fields here
 
     def __str__(self):
         return self.email
+    objects = CustomUserManager()
+    is_superuser = USERNAME_FIELD:
+    {
+        
+    }
